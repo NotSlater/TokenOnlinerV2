@@ -25,6 +25,7 @@ async function onliner(token) {
 	const client = new discord.Client();
 	client.on('ready', () => {
 		//client.user.setActivity(`Rust`);
+		client.user.setPresence({ status: "dnd" })
 		console.log(chalk.blue(`${'    '}` + `${'Successfully Logged In As: '} ` + client.user.tag ));
 	});
 	client.login(token);
